@@ -18,12 +18,46 @@ export default function App() {
   );
 }
 
+function TniLogo({ className = "" }) {
+  return (
+    <svg
+      className={`brandMark ${className}`.trim()}
+      viewBox="0 0 64 64"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="32" cy="32" r="30" fill="#285b4a" />
+      <path
+        d="M32 34C23 31 18 22 20 12c8 3 13 10 12 22Z"
+        fill="#ef805f"
+      />
+      <path
+        d="M32 34C41 31 46 22 44 12c-8 3-13 10-12 22Z"
+        fill="#f5ce6c"
+      />
+      <path
+        d="M32 35C25 27 26 16 32 9c6 7 7 18 0 26Z"
+        fill="#fff7ea"
+      />
+      <path
+        d="M32 34C23 36 20 44 22 53c7-3 11-10 10-19Z"
+        fill="#b9d7a8"
+      />
+      <path
+        d="M32 34C41 36 44 44 42 53c-7-3-11-10-10-19Z"
+        fill="#7daa6f"
+      />
+      <circle cx="32" cy="34" r="3.5" fill="#fff7ea" />
+    </svg>
+  );
+}
+
 function Header() {
   return (
     <header className="header">
-      <a href="#" className="brand">
-        <span className="brandIcon" aria-hidden="true">TNI</span>
-        <span>
+      <a href="#" className="brand" aria-label="Taska Nur Iris — laman utama">
+        <TniLogo />
+        <span className="brandWordmark">
           <strong>Taska Nur Iris</strong>
           <small>Ruang kecil, impian besar</small>
         </span>
@@ -357,9 +391,12 @@ function Contact() {
 function Footer() {
   return (
     <footer className="footer">
-      <div>
-        <strong>Taska Nur Iris <span>(TNI)</span></strong>
-        <p>© 2026 Taska Nur Iris. Hak cipta terpelihara.</p>
+      <div className="footerBrand">
+        <TniLogo className="footerMark" />
+        <div>
+          <strong>Taska Nur Iris <span>(TNI)</span></strong>
+          <p>© 2026 Taska Nur Iris. Hak cipta terpelihara.</p>
+        </div>
       </div>
       <a href="#contact">Atur Lawatan</a>
     </footer>
