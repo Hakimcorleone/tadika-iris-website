@@ -77,17 +77,6 @@ a {
   text-decoration: none;
 }
 
-.brandIcon {
-  width: 50px;
-  height: 50px;
-  border-radius: 17px;
-  background: var(--paper);
-  display: grid;
-  place-items: center;
-  font-size: 25px;
-  box-shadow: var(--soft-shadow);
-}
-
 .brand strong {
   display: block;
   font-family: var(--serif);
@@ -834,11 +823,6 @@ a {
     padding: 18px 0;
   }
 
-  .brandIcon {
-    width: 48px;
-    height: 48px;
-  }
-
   .brand strong {
     font-size: 22px;
   }
@@ -1042,18 +1026,6 @@ body {
   background: rgba(255, 255, 252, 0.9);
   box-shadow: 0 12px 36px rgba(32, 50, 45, 0.09);
   backdrop-filter: blur(18px);
-}
-
-.brandIcon {
-  width: 43px;
-  height: 43px;
-  border-radius: 14px 14px 14px 6px;
-  background: var(--peach);
-  color: white;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  box-shadow: 0 8px 20px rgba(239, 128, 95, 0.23);
 }
 
 .brand strong {
@@ -1868,13 +1840,6 @@ body {
     padding: 8px 10px;
   }
 
-  .brandIcon {
-    width: 38px;
-    height: 38px;
-    border-radius: 12px 12px 12px 5px;
-    font-size: 10px;
-  }
-
   .brand strong {
     font-size: 17px;
   }
@@ -2075,31 +2040,6 @@ body {
 .icon {
   display: block;
   flex: 0 0 auto;
-}
-
-.brandIcon {
-  position: relative;
-  overflow: hidden;
-  background: #285b4a;
-  color: #fff;
-  border: 3px solid rgba(255, 255, 255, 0.92);
-  border-radius: 18px 18px 18px 7px;
-  font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-}
-
-.brandIcon::after {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  right: -3px;
-  top: -3px;
-  border-radius: 50%;
-  background: #f5ce6c;
-  box-shadow: -10px 5px 0 #ef805f;
 }
 
 .heroAssurances span {
@@ -2352,5 +2292,60 @@ body {
 
   .mobileDock a {
     display: flex;
+  }
+}
+
+
+/* Custom Taska Nur Iris brand mark */
+.brandMark {
+  display: block;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  overflow: visible;
+  border-radius: 50%;
+  filter: drop-shadow(0 8px 12px rgba(24, 63, 51, 0.2));
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.brand:hover .brandMark {
+  transform: translateY(-1px) rotate(-2deg);
+  filter: drop-shadow(0 10px 14px rgba(24, 63, 51, 0.24));
+}
+
+.brandWordmark {
+  display: block;
+  min-width: 0;
+}
+
+.brandWordmark strong {
+  letter-spacing: -0.01em;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.footerMark {
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 6px 9px rgba(24, 63, 51, 0.16));
+}
+
+@media (max-width: 560px) {
+  .brandMark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footerBrand {
+    gap: 10px;
+  }
+
+  .footerMark {
+    width: 36px;
+    height: 36px;
   }
 }
