@@ -10,8 +10,10 @@ export default function App() {
       <Programs />
       <Experience />
       <WhyUs />
+      <Faq />
       <Contact />
       <Footer />
+      <MobileDock />
     </main>
   );
 }
@@ -20,22 +22,23 @@ function Header() {
   return (
     <header className="header">
       <a href="#" className="brand">
-        <span className="brandIcon">🌸</span>
+        <span className="brandIcon" aria-hidden="true">TNI</span>
         <span>
-          <strong>Taska Iris</strong>
-          <small>Early Learning Centre</small>
+          <strong>Taska Nur Iris</strong>
+          <small>Ruang kecil, impian besar</small>
         </span>
       </a>
 
       <nav className="nav">
         <a href="#about">Tentang Kami</a>
         <a href="#programs">Program</a>
-        <a href="#experience">Aktiviti</a>
+        <a href="#experience">Rutin Harian</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Hubungi</a>
       </nav>
 
       <a className="headerBtn" href="#contact">
-        Book Lawatan
+        Atur Lawatan
       </a>
     </header>
   );
@@ -46,25 +49,46 @@ function Hero() {
     <section className="hero">
       <div className="heroContent">
         <p className="label">Pendaftaran 2026 Dibuka</p>
-        <h1>Ruang selamat untuk anak belajar, bermain dan membesar.</h1>
+        <h1>Tempat anak kecil <em>membesar dengan yakin.</em></h1>
         <p className="heroText">
-          Taska Iris menyediakan persekitaran yang ceria, bersih dan penuh kasih
-          sayang untuk membantu perkembangan awal anak-anak melalui aktiviti
-          pembelajaran, bermain, sosial dan kreativiti.
+          Persekitaran yang selamat, ceria dan penuh kasih sayang untuk anak
+          berumur 2 hingga 6 tahun belajar melalui bermain.
         </p>
+        <div className="heroAssurances" aria-label="Keutamaan Taska Nur Iris">
+          <span>✓ Rutin tersusun</span>
+          <span>✓ Guru penyayang</span>
+          <span>✓ Belajar sambil bermain</span>
+        </div>
 
         <div className="heroActions">
-          <a href="#contact" className="primaryBtn">Book Sesi Lawatan</a>
+          <a href="#contact" className="primaryBtn">Atur Sesi Lawatan</a>
           <a href="#programs" className="secondaryBtn">Lihat Program</a>
         </div>
       </div>
 
-      <div className="heroImageWrap">
+      <div className="heroImageWrap" aria-label="Gambaran hari ceria di Taska Nur Iris">
         <div className="heroImage">
-          <div className="sun">☀️</div>
-          <div className="bear">🧸</div>
-          <div className="cloud cloudOne"></div>
-          <div className="cloud cloudTwo"></div>
+          <div className="classroomHeader">
+            <span>Hari ini di TNI</span>
+            <strong>Isnin, hari meneroka</strong>
+          </div>
+          <div className="classroomScene">
+            <div className="classroomRainbow"><i></i><i></i><i></i></div>
+            <div className="classroomBoard">
+              <small>Tema minggu ini</small>
+              <strong>Warna & Alam</strong>
+              <div><b>A</b><b>B</b><b>C</b></div>
+            </div>
+            <div className="classroomPlant"><i></i><span></span></div>
+            <div className="classroomRug"></div>
+            <div className="child childOne"><i></i><span></span></div>
+            <div className="child childTwo"><i></i><span></span></div>
+            <div className="blocks"><i></i><i></i><i></i></div>
+          </div>
+          <div className="classroomMoments">
+            <span><small>9:00 pagi</small><strong>Circle time</strong></span>
+            <span><small>11:30 pagi</small><strong>Aktiviti seni</strong></span>
+          </div>
         </div>
 
         <div className="floatingInfo top">
@@ -73,8 +97,8 @@ function Hero() {
         </div>
 
         <div className="floatingInfo bottom">
-          <strong>Guru penyayang</strong>
-          <span>Suasana seperti keluarga</span>
+          <strong>Pendaftaran dibuka</strong>
+          <span>Temujanji lawatan dialu-alukan</span>
         </div>
       </div>
     </section>
@@ -84,9 +108,9 @@ function Hero() {
 function TrustBar() {
   const items = [
     ["Umur", "2 - 6 Tahun"],
-    ["Rutin", "Harian Tersusun"],
-    ["Aktiviti", "Belajar Sambil Bermain"],
-    ["Status", "Pendaftaran Dibuka"],
+    ["Waktu", "7:30 Pagi - 6:00 Petang"],
+    ["Hari", "Isnin - Jumaat"],
+    ["Lawatan", "Temujanji Dialu-alukan"],
   ];
 
   return (
@@ -105,13 +129,12 @@ function About() {
   return (
     <section className="section about" id="about">
       <div className="sectionIntro">
-        <p className="label">Tentang Taska Iris</p>
-        <h2>Lebih daripada sekadar tempat jagaan.</h2>
+        <p className="label">Tentang Taska Nur Iris</p>
+        <h2>Ibu bapa rasa tenang. Anak pula seronok untuk datang.</h2>
         <p>
-          Kami percaya anak-anak belajar dengan lebih baik apabila mereka rasa
-          selamat, disayangi dan bebas meneroka. Di Taska Iris, setiap rutin
-          dibina untuk membantu perkembangan emosi, sosial, bahasa dan kreativiti
-          anak-anak.
+          Kami melihat penjagaan awal sebagai hubungan kepercayaan antara anak,
+          keluarga dan pendidik. Setiap ruang dan rutin di Taska Nur Iris dibina
+          untuk menyokong perkembangan emosi, sosial, bahasa dan kreativiti.
         </p>
       </div>
 
@@ -155,11 +178,11 @@ function Experience() {
       </div>
 
       <div className="dayCard">
-        <Day time="7:30 AM" text="Arrival & Free Play" />
-        <Day time="9:00 AM" text="Morning Circle & Learning Theme" />
-        <Day time="10:30 AM" text="Snack & Outdoor Play" />
-        <Day time="11:30 AM" text="Creative Activity / Storytelling" />
-        <Day time="12:30 PM" text="Lunch & Rest Time" />
+        <Day time="7:30 Pagi" text="Sambutan Pagi & Free Play" />
+        <Day time="9:00 Pagi" text="Circle Time & Tema Pembelajaran" />
+        <Day time="10:30 Pagi" text="Snek & Aktiviti Luar" />
+        <Day time="11:30 Pagi" text="Aktiviti Kreatif / Bercerita" />
+        <Day time="12:30 Tgh" text="Makan Tengah Hari & Rehat" />
       </div>
     </section>
   );
@@ -176,11 +199,11 @@ function WhyUs() {
 
   return (
     <section className="section why">
-      <div className="whyVisual">
-        <div>📚</div>
-        <div>🧩</div>
-        <div>🎨</div>
-        <div>🌿</div>
+      <div className="whyVisual" aria-label="Empat fokus pembelajaran">
+        <div><strong>Aa</strong><small>Bahasa</small></div>
+        <div><strong>123</strong><small>Nombor</small></div>
+        <div><strong>✦</strong><small>Kreativiti</small></div>
+        <div><strong>∞</strong><small>Eksplorasi</small></div>
       </div>
 
       <div className="whyContent">
@@ -205,12 +228,56 @@ function WhyUs() {
   );
 }
 
+
+function Faq() {
+  const items = [
+    {
+      question: "Umur berapa yang diterima?",
+      answer: "Program Taska Nur Iris direka untuk kanak-kanak berumur 2 hingga 6 tahun, dengan aktiviti mengikut tahap perkembangan.",
+    },
+    {
+      question: "Apakah waktu operasi taska?",
+      answer: "Waktu operasi ialah Isnin hingga Jumaat, 7:30 pagi hingga 6:00 petang. Hubungi kami untuk semak kekosongan semasa.",
+    },
+    {
+      question: "Boleh datang melawat sebelum mendaftar?",
+      answer: "Boleh. Sesi lawatan membantu ibu bapa melihat ruang, memahami rutin harian dan berbincang tentang keperluan anak.",
+    },
+    {
+      question: "Bagaimana perkembangan anak dikongsi?",
+      answer: "Maklumat rutin, aktiviti dan perkembangan boleh dikongsi melalui saluran komunikasi yang dipersetujui bersama ibu bapa.",
+    },
+  ];
+
+  return (
+    <section className="section faq" id="faq">
+      <div className="sectionIntro left">
+        <p className="label">Soalan Ibu Bapa</p>
+        <h2>Sebelum melawat, mungkin ini yang anda ingin tahu.</h2>
+        <p>Jawapan ringkas untuk membantu anda membuat perbandingan dengan lebih mudah.</p>
+      </div>
+
+      <div className="faqList">
+        {items.map((item, index) => (
+          <details className="faqItem" key={item.question} open={index === 0}>
+            <summary>
+              <span>{item.question}</span>
+              <b>⌄</b>
+            </summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contactContent">
         <p className="label">Jom Datang Melawat</p>
-        <h2>Book sesi lawatan Taska Iris.</h2>
+        <h2>Lihat sendiri ruang yang bakal menjadi dunia kecil anak anda.</h2>
         <p>
           Berminat untuk daftar anak? Tinggalkan maklumat anda dan kami akan
           hubungi untuk semak kekosongan, program yang sesuai dan jadual lawatan.
@@ -223,11 +290,30 @@ function Contact() {
       </div>
 
       <form className="form">
-        <input placeholder="Nama ibu/bapa" />
-        <input placeholder="No. telefon" />
-        <input placeholder="Umur anak" />
-        <textarea placeholder="Saya berminat untuk book lawatan..." />
-        <button type="button">Hantar Pertanyaan</button>
+        <div className="formHeading">
+          <span>Permintaan lawatan</span>
+          <strong>Ceritakan sedikit tentang anak anda</strong>
+        </div>
+        <label>
+          <span>Nama ibu / bapa</span>
+          <input name="parent-name" placeholder="Contoh: Nur Aisyah" />
+        </label>
+        <div className="formRow">
+          <label>
+            <span>No. telefon</span>
+            <input name="phone" type="tel" placeholder="01X-XXXXXXX" />
+          </label>
+          <label>
+            <span>Umur anak</span>
+            <input name="child-age" placeholder="Contoh: 4 tahun" />
+          </label>
+        </div>
+        <label>
+          <span>Soalan atau perkara yang ingin dibincangkan</span>
+          <textarea name="message" placeholder="Contoh: Anak pertama kali masuk taska..." />
+        </label>
+        <button type="button">Hantar Permintaan Lawatan</button>
+        <small className="formNote">Maklumat anda hanya digunakan untuk urusan lawatan.</small>
       </form>
     </section>
   );
@@ -237,11 +323,21 @@ function Footer() {
   return (
     <footer className="footer">
       <div>
-        <strong>Taska Iris</strong>
-        <p>© 2026 Taska Iris. All rights reserved.</p>
+        <strong>Taska Nur Iris <span>(TNI)</span></strong>
+        <p>© 2026 Taska Nur Iris. Hak cipta terpelihara.</p>
       </div>
-      <a href="#contact">Book Lawatan</a>
+      <a href="#contact">Atur Lawatan</a>
     </footer>
+  );
+}
+
+
+function MobileDock() {
+  return (
+    <div className="mobileDock" aria-label="Tindakan pantas">
+      <a href="#programs">Lihat Program</a>
+      <a href="#contact">Atur Lawatan</a>
+    </div>
   );
 }
 
