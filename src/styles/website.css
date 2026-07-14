@@ -2069,3 +2069,288 @@ body {
     color: white;
   }
 }
+
+
+/* TNI photography, logo and icon system */
+.icon {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.brandIcon {
+  position: relative;
+  overflow: hidden;
+  background: #285b4a;
+  color: #fff;
+  border: 3px solid rgba(255, 255, 255, 0.92);
+  border-radius: 18px 18px 18px 7px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.brandIcon::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: -3px;
+  top: -3px;
+  border-radius: 50%;
+  background: #f5ce6c;
+  box-shadow: -10px 5px 0 #ef805f;
+}
+
+.heroAssurances span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.heroAssurances .icon {
+  color: #285b4a;
+  stroke-width: 2.6;
+}
+
+.heroImage {
+  isolation: isolate;
+  background: #173f34;
+}
+
+.heroImage::before {
+  content: none;
+}
+
+.heroPhoto,
+.heroPhotoShade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heroPhoto {
+  z-index: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroPhotoShade {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(13, 40, 32, 0.55) 0%, rgba(13, 40, 32, 0.04) 43%, rgba(13, 40, 32, 0.68) 100%),
+    linear-gradient(90deg, rgba(13, 40, 32, 0.15), transparent 55%);
+  pointer-events: none;
+}
+
+.classroomHeader {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+  padding: 24px 26px;
+  color: white;
+  background: transparent;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.32);
+}
+
+.classroomHeader span {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.classroomHeader strong {
+  color: white;
+}
+
+.classroomMoments {
+  position: absolute;
+  z-index: 2;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  padding: 0;
+  background: transparent;
+}
+
+.classroomMoments > span {
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 26px rgba(17, 45, 36, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.heroPhotoCredit {
+  position: absolute;
+  z-index: 3;
+  right: 22px;
+  bottom: 88px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 9px;
+  font-weight: 700;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.heroPhotoCredit a {
+  color: white;
+  text-underline-offset: 2px;
+}
+
+.feature .featureIcon {
+  display: grid;
+  place-items: center;
+  color: #c96543;
+}
+
+.feature:nth-child(2) .featureIcon {
+  background: var(--sky-soft);
+  color: #347a96;
+}
+
+.feature:nth-child(3) .featureIcon {
+  background: var(--sage-soft);
+  color: #285b4a;
+}
+
+.photoCollage {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: minmax(430px, 1fr);
+  gap: 14px;
+  min-height: 500px;
+}
+
+.photoCard {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 6px solid white;
+  border-radius: 30px 30px 30px 10px;
+  background: #dfe9e2;
+  box-shadow: var(--shadow);
+}
+
+.photoCardSmall {
+  margin: 52px 0;
+  border-radius: 24px 24px 9px 24px;
+}
+
+.photoCard img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.photoCardLarge img {
+  object-position: center;
+}
+
+.photoCardSmall img {
+  object-position: 56% center;
+}
+
+.photoCard:hover img {
+  transform: scale(1.035);
+}
+
+.photoCard figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  gap: 5px;
+  padding: 54px 18px 17px;
+  background: linear-gradient(transparent, rgba(16, 42, 34, 0.86));
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.photoCard figcaption a {
+  width: fit-content;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 9px;
+  font-weight: 700;
+  text-underline-offset: 2px;
+}
+
+.check span {
+  display: grid;
+  place-items: center;
+}
+
+.check span .icon {
+  stroke-width: 2.7;
+}
+
+.faqChevron::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.mobileDock a {
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+@media (max-width: 980px) {
+  .photoCollage {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 560px) {
+  .classroomHeader {
+    height: auto;
+    padding: 18px 17px;
+  }
+
+  .classroomMoments {
+    padding: 0;
+  }
+
+  .heroPhotoCredit {
+    right: 16px;
+    bottom: 81px;
+    max-width: 180px;
+    text-align: right;
+  }
+
+  .photoCollage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 270px 220px;
+    min-height: 0;
+  }
+
+  .photoCard,
+  .photoCardSmall {
+    margin: 0;
+    border-width: 4px;
+    border-radius: 22px 22px 22px 8px;
+  }
+
+  .photoCardSmall {
+    border-radius: 20px 20px 7px 20px;
+  }
+
+  .photoCard figcaption {
+    padding: 46px 15px 14px;
+  }
+
+  .mobileDock a {
+    display: flex;
+  }
+}
