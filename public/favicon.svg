@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title>Taska Nur Iris</title>
-  <rect width="64" height="64" rx="19" fill="#285b4a"/>
-  <circle cx="53" cy="11" r="10" fill="#f5ce6c"/>
-  <circle cx="44" cy="16" r="8" fill="#ef805f"/>
-  <path d="M15 21h34v7H36v23h-8V28H15z" fill="#fff"/>
-  <path d="M40 33h8v18h-8z" fill="#dcebdc"/>
-  <path d="M15 33h8v18h-8z" fill="#dcebdc"/>
+  <circle cx="32" cy="32" r="31" fill="#fff7ea"/>
+  <circle cx="32" cy="32" r="28.5" fill="#285b4a"/>
+  <path d="M32 34C23 31 18 22 20 12c8 3 13 10 12 22Z" fill="#ef805f"/>
+  <path d="M32 34C41 31 46 22 44 12c-8 3-13 10-12 22Z" fill="#f5ce6c"/>
+  <path d="M32 35C25 27 26 16 32 9c6 7 7 18 0 26Z" fill="#fff7ea"/>
+  <path d="M32 34C23 36 20 44 22 53c7-3 11-10 10-19Z" fill="#b9d7a8"/>
+  <path d="M32 34C41 36 44 44 42 53c-7-3-11-10-10-19Z" fill="#7daa6f"/>
+  <circle cx="32" cy="34" r="3.5" fill="#fff7ea"/>
 </svg>
